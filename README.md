@@ -43,4 +43,3 @@
 ## License
 
 This project is open-source and can be freely used and modified.
-```
