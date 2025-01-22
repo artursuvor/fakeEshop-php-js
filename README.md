@@ -9,7 +9,7 @@
 
 1. **Clone the repository**:
    ```bash
-   git clone [<repository_url>](https://github.com/artursuvor/fakeEshop-php-js)
+   git clone https://github.com/artursuvor/fakeEshop-php-js
    cd fakeeshop-php-js
    ```
 
