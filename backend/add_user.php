@@ -16,9 +16,13 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $username = $_POST['username'] ?? '';
     $email = $_POST['email'] ?? '';
     $password = $_POST['password'] ?? '';
+<<<<<<< HEAD
 
     $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
+=======
+    $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
+>>>>>>> c446b861a8dcc7357a975a67f0dcbaae635981ba
     $stmt = $conn->prepare("INSERT INTO users (username, email, password) VALUES (?, ?, ?)");
     $stmt->bind_param("sss", $username, $email, $hashedPassword);
 
