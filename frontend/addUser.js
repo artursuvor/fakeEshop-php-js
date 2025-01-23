@@ -18,3 +18,4 @@ document.getElementById("addUserForm").addEventListener("submit", function (even
     })
     .catch(error => console.error("Ошибка:", error));
 });
+

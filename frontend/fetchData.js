@@ -1,4 +1,10 @@
 document.getElementById("fetchData").addEventListener("click", () => {
+    const userList = document.getElementById("userList");
+
+    if (userList.innerHTML.trim() !== "") {
+        userList.innerHTML = ""; 
+        return; 
+    }
     fetch("../backend/users.php")
         .then((response) => response.json())
         .then((data) => {
