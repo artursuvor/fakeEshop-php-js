@@ -19,3 +19,21 @@ document.getElementById("addUserForm").addEventListener("submit", function (even
     .catch(error => console.error("Ошибка:", error));
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+    const user = JSON.parse(localStorage.getItem('user'));
+    const usernamePar = document.getElementById('usernamePar');
+    const addUserSection = document.getElementById('addUserSection');
+
+    if (user) {
+        usernamePar.textContent = `${user.username} (${user.role})`;
+        if (user.role === 'admin') {
+            addUserSection.style.display = 'block';
+        } else {
+            addUserSection.style.display = 'none';
+        }
+    } else {
+        usernamePar.textContent = 'Guest';
+        addUserSection.style.display = 'none';
+    }
+});
+
